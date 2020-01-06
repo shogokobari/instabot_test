@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>自動いいね</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<h1>自動いいね</h1>
+
+    <form method="post" action="/">
+        <div>
+            ユーザーネーム：
+            <input type="text" name="username">
+        </div>
+        <div>
+            パスワード：
+            <input type="text" name="password">
+        </div>
+        <div>
+            検索するタグ<br>
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+            <input name="hashtag" value="">
+        </div>
+        <div>
+            いいね毎の時間間隔：
+            <input type="text" name="good_time">秒
+        </div>
+        <div>
+            連続いいね数の上限：
+            <input type="text" name="good_max">
+        </div>
+        <div>
+            連続いいねの間隔：
+            <input type="text" name="goods_time">分
+        </div>
+        <div>
+            １日の上限いいね数：
+            <input type="text" name="good_max">
+        </div>
+        <div>
+            <input type="submit" name="do" value="開始">
+        </div>
+    </form>
+
+    {% if res %}
+    <div>
+        {% if res.now_time %}
+        <h2>稼働時刻</h2>
+        {{ res.now_time }}
+        {% endif %}
+    </div>
+{% endif %}
+</body>
+</html>
