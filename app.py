@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
